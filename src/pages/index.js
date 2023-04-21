@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import dbConnection from "api/mongo.js"
 
 const inter = Inter({ subsets: ['latin'] })
 
