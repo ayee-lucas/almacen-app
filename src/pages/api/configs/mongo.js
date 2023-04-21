@@ -12,3 +12,18 @@ exports.dbConnection = async () => {
         console.log(err)
     }
 }
+
+const conn = {
+    isConnected: false
+}
+
+exports.dbConnection = async ()=>{
+    if(conn.isConnected) return;
+    const db = await connect(process.env.MONGODB_URI);
+    conn.isConnected = db.connection[0].readyState;
+    console.log(db.connection.db.almacenadora5)
+}
+
+connection.on('connected',()=>{
+    console.log('MongoDb is connected');
+})
