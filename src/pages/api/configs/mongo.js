@@ -1,17 +1,22 @@
-'use strict'
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const { MONGODB_URI } = process.env;
-export const connection = async()=> {
-    try {
-        await mongoose.connect(MONGODB_URI, {
-          useNewUrlParser: true,
-          useUnifiedTopology: true,
-        });
-        console.log('Conexión exitosa a la base de datos');
-      } catch (err) {
-        console.error('Error al conectar a la base de datos', err);
-      };
-}
 
-export default connection;
+const uri = process.env.MONGODB_URI;
+const dbName = process.env.MONGODB_DB;
+
+// Connect to MongoDB Atlas
+ export async function connect() {
+  try {
+    await mongoose.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      dbName: dbName,
+    });
+    console.log('Connected to MongoDB Atlas');
+  } catch (err) {
+    console.error('Failed to connect to MongoDB Atlas', err);
+  }
+};
+
+
+
