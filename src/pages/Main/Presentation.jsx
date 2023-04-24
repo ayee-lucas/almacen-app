@@ -1,9 +1,11 @@
-import React from "react";
-import Link from "next/link";
-import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
+import React from 'react'
+import Link from 'next/link'
+import AboutPage from './AboutPage'
+import { AiOutlineRight, AiOutlineDown } from 'react-icons/ai'
 
 const Presentation = () => {
   return (
+    <>
     <div className="bg-presentation w-full h-screen bg-cover bg-center bg-fixed">
       <div className="absolute bg-black left-5 top-3 bottom-3 right-5 opacity-70
                       max-sm:left-0  max-sm:top-0 max-sm:bottom-0 max-sm:right-0 max-sm:opacity-90 max-sm:bg-gradient-to-b max-sm:from-black max-sm:via-black gradient 
@@ -53,7 +55,9 @@ const Presentation = () => {
         </div>
       </div>
     </div>
+    <AboutPage />
+    </>
   );
 };
 
-export default Presentation;
+export default Presentation
