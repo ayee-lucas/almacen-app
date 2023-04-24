@@ -50,3 +50,16 @@ body{
   left: 50%; /* center the label */
   transform: translateX(-50%); /* center the label */
 }
+
+.gradient {
+  display: hidden;
+}
+
+@media not all and (min-width: 640px) {
+  .gradient{
+    color: rgb(0, 0, 0);
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+    from(rgba(0,0,0,1)),to(rgba(0,0,0,0)));
+  }
+  
+}
