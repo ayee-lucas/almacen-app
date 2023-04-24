@@ -51,6 +51,7 @@ const Presentation = () => {
         </div>
       </div>
       {/* About Page Component */}
+      <AboutPage />
     </>
   );
 };
