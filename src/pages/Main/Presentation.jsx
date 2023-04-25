@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import AboutPage from './AboutPage'
+import AboutPage from '../../components/AboutPage'
 import { AiOutlineRight, AiOutlineDown } from 'react-icons/ai'
 
 const Presentation = () => {
