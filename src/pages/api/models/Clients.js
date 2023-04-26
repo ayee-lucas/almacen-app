@@ -3,7 +3,7 @@
 import moongose from "mongoose";
 
 // Define the Client Schema
-const ClientSchema = new moongose.Schema({
+const clientSchema = new moongose.Schema({
   name: {
     type: "string",
     required: true,
@@ -31,7 +31,7 @@ const ClientSchema = new moongose.Schema({
 });
 
 // Create the Client model
-const Client = moongose.model("Client", ClientSchema);
+const Client = moongose.models.Client || moongose.model("Client", clientSchema);
 
 // Export the Client model
-export default Client;
+export default  Client;
