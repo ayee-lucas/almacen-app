@@ -1,6 +1,5 @@
-import { connect } from "mongoose";
+import {connect} from "../../configs/mongo";
 
-import Model from "./clients.model";
 
 connect();
 
