@@ -30,7 +30,7 @@ const cellarSchema = new moongose.Schema({
 });
 
 // Create the Cellar model
-const Cellar = moongose.models.Client || moongose.model("Cellar", cellarSchema);
+const Cellar = moongose.models.Cellar || moongose.model("Cellar", cellarSchema);
 
 // Export the cellar model
 export default Cellar;
