@@ -21,6 +21,10 @@ body {
   font-family: "JetBrains Mono", monospace;
 }
 
+.k2d{
+  font-family: 'K2D', sans-serif;
+}
+
 .bg-presentation {
   background-image: url("https://images.unsplash.com/photo-1435575653489-b0873ec954e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
 }
@@ -28,8 +32,6 @@ body {
 .bg-presentationAboutPage {
   background-image: url("https://images.unsplash.com/photo-1577962829664-56f1d70c3767?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=719&q=80");
   background-repeat: no-repeat;
-  background-position-y: top;
-  background-size: contain;
 }
 
 .underline-container {
@@ -50,15 +52,39 @@ body {
   background-color: #ffffff; /* color of the underline */
 }
 
+.underlineAboutPage {
+  position: absolute;
+  left: 6%; /* center the underline */
+  bottom: -5%;
+  width: 20%; /* width of the underline */
+  height: 1px; /* height of the underline */
+  background-color: #ffffff; /* color of the underline */
+}
+
 .underline-label {
   position: absolute;
   bottom: -20%; /* position of the label below the underline */
   left: 50%; /* center the label */
   transform: translateX(-50%); /* center the label */
 }
+
+.about-label {
+  position: relative;
+  top: 5%;/* position of the label below the underline */
+  left: 6%; /* position of the label below the underline */
+}
+
+.about-p {
+  position: relative;
+  top: 12%; /* position of the label below the underline */
+  left: 6%; /* position of the label below the underline */
+}
+
 .gradient {
   display: hidden;
 }
+
+/* max-sm */
 
 @media not all and (min-width: 640px) {
   .gradient {
@@ -87,6 +113,14 @@ body {
     height: 3px; /* height of the underline */
     background-color: #ffffff; /* color of the underline */
   }
+
+ 
+
+  .bg-presentationAboutPage {
+    background-image: url("https://images.unsplash.com/photo-1581455987165-d1e60e0fbea5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80");
+    background-repeat: no-repeat;
+}
+
 }
 
 @keyframes bounce {
