@@ -10,6 +10,7 @@ const Presentation = () => {
     <>
       <div className="bg-presentation w-full h-screen bg-cover bg-center bg-fixed overflow-hidden">
         <div className="absolute transition-all bg-black left-5 top-3 bottom-3 right-5 opacity-75 max-sm:inset-0 max-sm:opacity-90 max-sm:bg-gradient-to-b max-sm:from-black max-sm:via-black gradient" />
+        <div className="absolute bg-black inset-0 opacity-10" />
         <div className="flex items-center w-full h-full sm:justify-center">
           {/* Presentation Text */}
           <div className=" z-[2] max-sm:ml-6 ">
