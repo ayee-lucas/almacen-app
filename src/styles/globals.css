@@ -53,8 +53,7 @@ body {
 }
 
 .underlineAboutPage {
-  position: absolute;
-  left:6%; /* center the underline */
+  left:50%; /* center the underline */
   bottom: -5%;
   width: 20%; /* width of the underline */
   height: 1px; /* height of the underline */
