@@ -5,22 +5,22 @@ import moongose from "mongoose";
 // Define cellar Schema
 const cellarSchema = new moongose.Schema({
     name: {
-        type: "string",
+        type: String,
         required: true,
     },
     description: {
-        type: "string"
+        type: String,
     },
     location: {
-        type: "string",
+        type: String,
         required: true,
     },
     size: {
-        type: "string",
+        type: String,
         required: true,
     },
     state: {
-        type: "string",
+        type: String,
         required: true,
     },
     price: {
