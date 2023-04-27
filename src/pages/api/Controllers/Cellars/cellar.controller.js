@@ -55,3 +55,4 @@ export default async function handler(req, res) {
             return res.status(400).json({ msg: "This method is not supported" })
     }
 }
+//Sin validaciones
