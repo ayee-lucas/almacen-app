@@ -1,11 +1,19 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Link from 'next/link'
 import AboutPage from '../../components/AboutPage'
+import 'animate.css'
 //Icons
 
 import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
 
 const Presentation = () => {
+
+  const [titleAnimation, setTitleAnimation] = useState(false);
+
+
+
+  
+
   return (
     <>
       <div className="bg-presentation w-full h-screen bg-cover bg-center bg-fixed overflow-hidden">
@@ -14,8 +22,8 @@ const Presentation = () => {
         <div className="flex items-center w-full h-full sm:justify-center">
           {/* Presentation Text */}
           <div className=" z-[2] max-sm:ml-6 ">
-            <div className="underline-container">
-              <h1 className="underline-text transition-all text-white ropa-sans sm:tracking-widest text-center text-[140px] font-bold max-sm:hidden max-lg:text-[120px]">
+            <div className="underline-container ">
+              <h1 className="underline-text animate__animated animate__fadeInUp transition-all text-white ropa-sans sm:tracking-widest text-center text-[140px] font-bold max-sm:hidden max-lg:text-[120px]">
                 BLACKBOX
               </h1>
               <div className="underline max-sm:hidden" />
@@ -25,9 +33,9 @@ const Presentation = () => {
             </div>
             {/** Mobile Title */}
             <div className="underline-container transition-all mb-44 text-white jetbrains-mono text-[60px] sm:hidden">
-              <h1 className="underline-text">BLACK</h1>
+              <h1 className="underline-text animate__animated animate__slideInDown">BLACK</h1>
               <div className="underline" />
-              <h1 className="underline-label">BOX</h1>
+              <h1 className="underline-label  animate__animated animate__fadeInUp ">BOX</h1>
             </div>
             <div className="z-[2] max-sm:absolute max-sm:left-[30%] mt-20 max-sm:ml-4 flex justify-center">
               {/* Map Link */}
