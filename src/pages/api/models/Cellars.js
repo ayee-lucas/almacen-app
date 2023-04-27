@@ -26,7 +26,7 @@ const cellarSchema = new moongose.Schema({
     price: {
         type: Number,
         required: true,
-    },
+    }
 });
 
 // Create the Cellar model
