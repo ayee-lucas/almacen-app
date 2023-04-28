@@ -1,9 +1,11 @@
 import React from "react";
 import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
 import "animate.css";
+import DashboardPage from "@/pages/DashboardPage";
 
 //Icons
 import Link from 'next/link'
+
 
 const Presentation = () => {
   return (
@@ -35,7 +37,7 @@ const Presentation = () => {
           <div className="z-[2] max-sm:absolute max-sm:left-[30%] mt-20 max-sm:ml-4 flex justify-center">
             {/* Map Link */}
             <Link
-              href={"/"}
+              href={"/DashboardPage"}
               className="bg-black py-3 px-10 rounded-[10px] relative flex justify-between items-center"
             >
               <h1 className="text-white jetbrains-mono">Mapa</h1>

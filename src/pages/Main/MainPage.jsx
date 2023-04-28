@@ -1,8 +1,10 @@
 import React, { useRef, useEffect, useState, createContext } from "react";
+
 import Presentation from "@/components/Main/Presentation";
 import AboutPage from "@/components/Main/AboutPage";
 import Separator from "@/components/Main/Separator";
 import SeparatorVideo from "@/components/Main/SeparatorVideo";
+
 
 export const AnimationContext = createContext();
 

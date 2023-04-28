@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Image from "next/image";
-import logo from "../../assets/Logos/logoblackbox.png";
+import logo from "../../assets/Logos/blackboxText.png";
 import { AnimationContext } from "@/pages/Main/MainPage";
 import "animate.css";
 
