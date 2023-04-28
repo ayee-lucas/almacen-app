@@ -19,6 +19,11 @@ export default async (req, res) => {
       try {
         // Buscamos todos los clientes en la base de datos
         const clients = await Clients.find();
+        // Verificamos si la respuesta está vacía o no
+        if (!clients || clients.length === 0) {
+        // Si no hay clientes, devolvemos un mensaje de error
+        return res.send({message: 'There is no clients to show'});
+        }
         // Retornamos un objeto JSON con los clientes y un estado de 200
         return res.status(200).json(clients);
       } catch (error) {
