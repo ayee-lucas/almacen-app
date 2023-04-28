@@ -1,33 +1,60 @@
-import React from "react";
-import Presentation from "../../components/Main/Presentation";
-import AboutPage from "../../components/Main/AboutPage";
+import React, { useRef, useEffect, useState, createContext } from "react";
+import Presentation from "@/components/Main/Presentation";
+import AboutPage from "@/components/Main/AboutPage";
 import Separator from "@/components/Main/Separator";
 import SeparatorVideo from "@/components/Main/SeparatorVideo";
 
+export const AnimationContext = createContext();
+
 const MainPage = () => {
+  const animationRef = useRef([]);
+
+  const [isVisible, setIsVisible] = useState();
+
+  console.log(isVisible);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            entry.target.classList.add("show-animation");
+          } else {
+            setIsVisible(false);
+            entry.target.classList.remove("show-animation");
+          }
+          console.log("Intersection detected:", entry.target);
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    animationRef.current.forEach((item) => observer.observe(item));
+  }, []);
+
+  const setRefs = (ref, index) => {
+    animationRef.current[index] = ref;
+  };
+
+  const contextValue = {
+    setRefs,
+    isVisible,
+  };
+
   return (
     <>
       {/* Presentation Component */}
-      <section>
-        <Presentation />
-      </section>
+      <Presentation />
 
-      {/* Separator */}
-
-      <section>
+      <AnimationContext.Provider value={contextValue}>
+        {/* Separator */}
         <Separator />
-      </section>
-
-      {/* Video Separator */}
-
-      <section>
+        {/* Video Separator */}
         <SeparatorVideo />
-      </section>
-
-      {/* About Page Component */}
-      <section>
+        {/* About Page Component */}
         <AboutPage />
-      </section>
+      </AnimationContext.Provider>
     </>
   );
 };

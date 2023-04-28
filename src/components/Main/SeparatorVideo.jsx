@@ -1,8 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
+import { AnimationContext } from "@/pages/Main/MainPage";
 
 import "animate.css";
 
 const SeparatorVideo = () => {
+
+  const { setRefs, isVisible} = useContext(AnimationContext);
+
   return (
     <div className="h-screen w-full grid  place-items-center items-center min-h-[100vh] bg-black text-white">
       <video
@@ -12,7 +16,9 @@ const SeparatorVideo = () => {
         className="relative w-full h-full object-cover max-sm:hidden"
       ></video>
 
-      <div className="flex flex-col justify-center items-center ml-10 p-20 max-sm:p-4 max-sm:ml-0">
+      <div className="flex flex-col justify-center items-center ml-10 p-20 max-sm:p-4 max-sm:ml-0"
+            ref={(ref) => setRefs(ref, 1)} 
+      >
         <h1 className="text-5xl font-bold text-center p-4 animate__animated animate__fadeInUp">
           Amenidades
         </h1>
