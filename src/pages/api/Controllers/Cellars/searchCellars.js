@@ -9,9 +9,9 @@ export default async function handler(req, res) {
             try {
                 const filteredCellars = await Cellars.find({
                     $or: [
-                        { name: { $regex: body.name, $options: 'i' } },
+                        { name: { $regex: body.search, $options: 'i' } },
 //                        { branch: { $regex: `${body.branch}`, $options: "i" } },
-                        { state: { $regex: body.state, $options: 'i' } },
+                        { state: { $regex: body.search, $options: 'i' } },
                     ],
                 });
                 return res.status(200).json({ cellars: filteredCellars });
