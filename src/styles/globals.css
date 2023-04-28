@@ -38,8 +38,7 @@ body {
 }
 
 .castoro {
-  font-family: 'Castoro Titling', cursive;
-
+  font-family: "Castoro Titling", cursive;
 }
 
 .bg-presentationAboutPage {
@@ -101,6 +100,8 @@ body {
 }
 
 .blur-custom {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
