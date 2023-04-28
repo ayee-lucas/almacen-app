@@ -1,12 +1,13 @@
 "use strict";
 
-import moongose from "mongoose";
+import mongoose from "mongoose";
 
 // Define cellar Schema
-const cellarSchema = new moongose.Schema({
+const cellarSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
+        unique: true    
     },
     description: {
         type: String,
@@ -26,11 +27,15 @@ const cellarSchema = new moongose.Schema({
     price: {
         type: Number,
         required: true,
+    },
+    owner: {
+        type: mongoose.Schema.Types.ObjectId, ref: 'Clients'
+        
     }
 });
 
 // Create the Cellar model
-const Cellar = moongose.models.Cellar || moongose.model("Cellar", cellarSchema);
+const Cellar = mongoose.models.Cellar || mongoose.model("Cellar", cellarSchema);
 
 // Export the cellar model
 export default Cellar;
