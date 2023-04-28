@@ -4,23 +4,30 @@ import AboutPage from "../../components/Main/AboutPage";
 import Separator from "@/components/Main/Separator";
 import SeparatorVideo from "@/components/Main/SeparatorVideo";
 
-
-
-const  MainPage = () => {
+const MainPage = () => {
   return (
     <>
       {/* Presentation Component */}
-      <Presentation />
+      <section>
+        <Presentation />
+      </section>
 
       {/* Separator */}
-      <Separator />
+
+      <section>
+        <Separator />
+      </section>
 
       {/* Video Separator */}
 
-      <SeparatorVideo />
+      <section>
+        <SeparatorVideo />
+      </section>
 
       {/* About Page Component */}
-      <AboutPage />
+      <section>
+        <AboutPage />
+      </section>
     </>
   );
 };
