@@ -8,27 +8,16 @@ export default async function handler(req, res) {
     switch (method) {
         case "GET":
             try {
-                const cellars = await Cellars.find();
-                console.log(cellars);
-                console.log("Cellars showing")
+                const cellars = await Cellars.findById(id);
+                if(!cellars) return res.status(404).send({message: 'Cellar not found'});
                 return res.status(200).json({ msg: cellars, success: true });
             } catch (err) {
                 return res.status(500).json({ error: err.message })
             }
 
-        case "POST":
-            try {
-                const newCellar = new Cellars(body)
-                const saveCellar = await newCellar.save()
-                return res.status(201).json(saveCellar);
-            } catch (err) {
-                console.error(err)
-                return res.status(500).json({ error: err.message })
-            }
-
         case "PUT":
             try {
-                const updateCellar = await Cellars.findOneAndUpdate({ _id: id }, body, {
+                const updateCellar = await Cellars.findByIdAndUpdate(id, body, {
                     new: true,
                     runValidators: true,
                 });
@@ -40,10 +29,9 @@ export default async function handler(req, res) {
                 return res.status(500).json({ error: err.message });
             }
 
-
         case "DELETE":
             try {
-                const deleteCellar = await Cellars.findOneAndDelete({ _id: id });
+                const deleteCellar = await Cellars.findByIdAndDelete(id);
                 if (!deleteCellar) {
                     return res.status(404).json({ error: "Cellar not found" });
                 }
