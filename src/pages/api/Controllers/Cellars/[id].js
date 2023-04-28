@@ -9,8 +9,7 @@ export default async function handler(req, res) {
         case "GET":
             try {
                 const cellars = await Cellars.findById(id);
-                console.log(cellars);
-                console.log("Cellars showing")
+                if(!cellars) return res.status(404).send({message: 'Cellar not found'});
                 return res.status(200).json({ msg: cellars, success: true });
             } catch (err) {
                 return res.status(500).json({ error: err.message })
