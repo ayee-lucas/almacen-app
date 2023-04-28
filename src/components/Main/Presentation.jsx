@@ -1,8 +1,9 @@
 import React from "react";
 import "animate.css";
-import DashboardPage from "@/pages/DashboardPage";
 
 import { AiOutlineDown } from "react-icons/ai";
+
+
 
 
 
@@ -32,14 +33,6 @@ const Presentation = () => {
             </h1>
           </div>
           <div className="z-[2] max-sm:absolute max-sm:left-[30%] mt-20 max-sm:ml-4 flex justify-center">
-            {/* Map Link */}
-            <Link
-              href={"/DashboardPage"}
-              className="bg-black py-3 px-10 rounded-[10px] relative flex justify-between items-center"
-            >
-              <h1 className="text-white jetbrains-mono">Mapa</h1>
-              <AiOutlineRight className="text-white absolute right-1 right-animation" />
-            </Link>
           </div>
         </div>
       </div>
