@@ -47,6 +47,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.bg-separator {
+  background-image: url("https://images.unsplash.com/photo-1565891741441-64926e441838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80");
+}
+
 .underline-container {
   position: relative;
 }
@@ -94,6 +98,10 @@ body {
 
 .gradient {
   display: hidden;
+}
+
+.blur-custom {
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
 /* max-sm */

@@ -16,8 +16,8 @@ const SeparatorVideo = () => {
         className="relative w-full h-full object-cover max-sm:hidden"
       ></video>
 
-      <div className="flex flex-col justify-center items-center ml-10 p-20 max-sm:p-4 max-sm:ml-0"
-            ref={(ref) => setRefs(ref, 1)} 
+      <div className="flex flex-col justify-center items-center ml-10 p-20 max-sm:p-4 max-sm:ml-0 hide-animation"
+            ref={(ref) => setRefs(ref, 2)} 
       >
         <h1 className="text-5xl font-bold text-center p-4 animate__animated animate__fadeInUp">
           Amenidades

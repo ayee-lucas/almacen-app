@@ -27,7 +27,7 @@ const MainPage = () => {
           console.log("Intersection detected:", entry.target);
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.7 }
     );
 
     animationRef.current.forEach((item) => observer.observe(item));
