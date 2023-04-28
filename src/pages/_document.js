@@ -28,7 +28,22 @@ export default function Document() {
         <link
           href="https://fonts.googleapis.com/css2?family=K2D:wght@100;300;400;500&display=swap"
           rel="stylesheet"
-        ></link>
+        />
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+          rel="stylesheet"
+        />
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;900&display=swap"
+          rel="stylesheet"
+        />
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body>
         <Main />

@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Head from 'next/head'
 import { Inter } from "next/font/google";
-import Presentation from "./Main/Presentation";
+import MainPage from "./Main/MainPage";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
@@ -15,7 +17,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
       </Head>
       <main>
-        <Presentation />
+        <MainPage />
       </main>
     </>
   );
