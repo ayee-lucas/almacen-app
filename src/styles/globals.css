@@ -38,13 +38,16 @@ body {
 }
 
 .castoro {
-  font-family: 'Castoro Titling', cursive;
-
+  font-family: "Castoro Titling", cursive;
 }
 
 .bg-presentationAboutPage {
   background-image: url("https://images.unsplash.com/photo-1577962829664-56f1d70c3767?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=719&q=80");
   background-repeat: no-repeat;
+}
+
+.bg-separator {
+  background-image: url("https://images.unsplash.com/photo-1565891741441-64926e441838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80");
 }
 
 .underline-container {
@@ -94,6 +97,12 @@ body {
 
 .gradient {
   display: hidden;
+}
+
+.blur-custom {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
 /* max-sm */

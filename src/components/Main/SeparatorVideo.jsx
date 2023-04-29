@@ -8,7 +8,10 @@ const SeparatorVideo = () => {
   const { setRefs, isVisible} = useContext(AnimationContext);
 
   return (
-    <div className="h-screen w-full grid grid-rows-2 place-items-center items-center min-h-[100vh] bg-black text-white">
+    <div className="h-screen w-full grid grid-rows-2 place-items-center items-center min-h-[100vh] bg-black text-white"
+
+    
+    >
       <video
         src={require("../../assets/Backgrounds/videobg.mp4")}
         autoPlay
@@ -16,13 +19,18 @@ const SeparatorVideo = () => {
         className="relative w-full h-full object-cover max-sm:hidden"
       ></video>
 
-      <div className="flex flex-col justify-center items-center ml-10 p-20 max-sm:p-4 max-sm:ml-0"
-            ref={(ref) => setRefs(ref, 1)} 
+      <div className="flex flex-col justify-center items-center ml-10 p-20 max-sm:p-4 max-sm:ml-0 "
       >
-        <h1 className="text-5xl font-bold text-center p-4 animate__animated animate__fadeInUp">
+        <h1 className="text-5xl font-bold text-center p-4 animate__animated animate__fadeInUp " 
+
+        >
           Amenidades
         </h1>
-        <div className="p-4 text-lg max-sm:text-sm max-sm:text-justify text-center ">
+        <div className="p-4 text-lg max-sm:text-sm max-sm:text-justify text-center hide-animation"
+        
+        
+            ref={(ref) => setRefs(ref, 3)}
+        >
           <p>
             En nuestra empresa, nos preocupamos por ofrecer no solo soluciones
             de almacenamiento flexibles y seguras, sino también una experiencia
