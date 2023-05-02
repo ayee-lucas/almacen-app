@@ -7,15 +7,14 @@ export default async function handler(req, res){
     const { method, body, query: {id} } = req;
     switch(method){
         case "POST":
-            try{
-                const newAdditional = new Additional(body)
-                const saveAdditional = await newAdditional.save()
-                return res.status(201).json(saveAdditional);
-
-            }   catch(err){
+            try {
+                const newService = new Additional(body)
+                const saveService = await newService.save()
+                return res.status(201).json(saveService);
+            } catch (err) {
                 console.error(err)
-                return res.status(500).json({ error: err.message})
-            } 
+                return res.status(500).json({ error: err.message })
+            }
 
     }
 }
