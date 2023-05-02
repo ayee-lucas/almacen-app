@@ -28,7 +28,7 @@ export default async function handler(req, res) {
                 if (!updateCellar) {
                     return res.status(404).json({ error: "Update operation failed" });
                 }
-                return res.status(404).send({ message: 'Deleted Succesfully' });
+                return res.status(404).send({ message: 'Updated Succesfully' });
             } catch (err) {
                 return res.status(500).json({ error: err.message });
             }
