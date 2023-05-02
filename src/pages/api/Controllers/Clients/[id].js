@@ -54,7 +54,7 @@ export default async(req, res) => {
                 // eliminando un registro en la base de datos con el id proporcionado
                 const deleteClient = await Clients.findByIdAndDelete(id); 
                 // si no se encuentra el registro, devuelve un mensaje de error
-                if(!deleteClient) returnres.status(404).json({msg: "Client not found"}) 
+                if(!deleteClient) return res.status(404).json({msg: "Client not found"}) 
                 // si se elimina el registro, devuelve un mensaje de éxito
                 return res.send({message: 'Client deleted sucessfully'}) 
             } catch (error) {

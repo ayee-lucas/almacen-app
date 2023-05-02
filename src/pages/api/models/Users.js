@@ -25,8 +25,7 @@ const userSchema = new moongose.Schema({
         required: true,
     },
     role: {
-        type: Number,
-        required: true,
+        type: String,
         upperCase: true,
         default: 'EMPLOYEE'
     }
