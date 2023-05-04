@@ -60,10 +60,8 @@ export const authOptions = {
 
   pages: {
     signIn: "/Login",
-    error: '/Login'
   },
 
-  database: process.env.MONGO_URI,
 
   
 };
