@@ -9,6 +9,7 @@ export default async function handler(req, res) {
         case "POST":
             try {
                 const newCellar = new Cellars(body)
+                body.service == null;
                 const saveCellar = await newCellar.save()
                 return res.status(201).json(saveCellar);
             } catch (err) {
