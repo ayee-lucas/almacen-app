@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { AnimationContext } from "@/pages/Main/MainPage";
-import video from "../../assets/Backgrounds/videobg.mp4";
 
 import "animate.css";
 
@@ -11,7 +10,7 @@ const SeparatorVideo = () => {
   return (
     <div className="h-screen w-full grid grid-rows-2 place-items-center items-center min-h-[100vh] bg-black text-white max-sm:grid-rows-1">
       <video
-        src={require("../../assets/Backgrounds/videobg.mp4")}
+        src={"https://firebasestorage.googleapis.com/v0/b/almacen-app-d3ca2.appspot.com/o/backgrounds%2Fvideobg.mp4?alt=media&token=673e3e9a-cf67-4ece-81cb-541e4a876a6c"}
         autoPlay
         muted
         loop

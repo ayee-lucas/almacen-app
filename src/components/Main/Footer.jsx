@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../assets/Logos/blackboxText.png"
 
 const Footer = () => {
   return (
@@ -13,7 +12,7 @@ const Footer = () => {
               <Image
                 width={50}
                 height={60}
-                src={Logo}
+                src={"https://firebasestorage.googleapis.com/v0/b/almacen-app-d3ca2.appspot.com/o/logos%2Fblackbox.png?alt=media&token=230eef6c-e1f8-41ed-acf2-3af6ef1f726f"}
                 className="mr-3"
                 alt="Logo"
               />
