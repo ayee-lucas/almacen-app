@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState, createContext } from "react";
-
+import RedirectBtn from "@/components/Main/RedirectBtn";
 import Presentation from "@/components/Main/Presentation";
 import AboutPage from "@/components/Main/AboutPage";
 import Separator from "@/components/Main/Separator";
 import SeparatorVideo from "@/components/Main/SeparatorVideo";
-
+import Footer from "@/components/Main/Footer";
 
 export const AnimationContext = createContext();
 
@@ -13,7 +13,7 @@ const MainPage = () => {
 
   const [isVisible, setIsVisible] = useState();
 
-  console.log(isVisible);
+  const [isSecondVisible, setIsSecondVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,7 +26,6 @@ const MainPage = () => {
             setIsVisible(false);
             entry.target.classList.remove("show-animation");
           }
-          console.log("Intersection detected:", entry.target);
         });
       },
       { threshold: 0.4 }
@@ -35,8 +34,34 @@ const MainPage = () => {
     animationRef.current.forEach((item) => observer.observe(item));
   }, []);
 
+
+  useEffect(() => {
+    const firstRef = animationRef.current[0];
+    const callback = () => {
+      console.log("First Ref is intersecting");
+      setIsSecondVisible(true);
+    };
+
+        const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        callback();
+         observer.disconnect();
+      }
+    });
+
+    if (firstRef) {
+      observer.observe(firstRef);
+    }
+
+    return() => {
+      observer.disconnect();
+    }
+
+  }, []);
+
   const setRefs = (ref, index) => {
     animationRef.current[index] = ref;
+
   };
 
   const contextValue = {
@@ -48,7 +73,7 @@ const MainPage = () => {
     <>
       {/* Presentation Component */}
       <Presentation />
-
+      <RedirectBtn isSecondVisible={isSecondVisible} />
       <AnimationContext.Provider value={contextValue}>
         {/* Separator */}
         <Separator />
@@ -57,6 +82,8 @@ const MainPage = () => {
         {/* About Page Component */}
         <AboutPage />
       </AnimationContext.Provider>
+      <Footer/>
+
     </>
   );
 };
