@@ -13,7 +13,7 @@ const generateToken = async(data) => {
             exp:  Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30 //30 dias
         }
 
-        return jwt.sign(payload, `${process.env.JWT_SECRET}`);
+        return jwt.sign(payload, `${process.env.NEXTAUTH_SECRET}`);
 
         
     } catch (err) {

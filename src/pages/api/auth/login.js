@@ -12,10 +12,12 @@ export default async (req, res) => {
     case "POST":
       const data = body;
 
+
       const credentials = {
         username: data.username,
         password: data.password,
       };
+
 
       const userFinded = await User.findOne({ username: data.username });
 
@@ -29,7 +31,7 @@ export default async (req, res) => {
       );
 
       if (!passCheck) {
-        return res.status(400).json({ message: "Wrong password" });
+        return res.status(400).json({ message: 'Wrong password', password:  credentials.password, database: userFinded.password });
       }
 
       const token = await generateToken(userFinded);
@@ -40,8 +42,6 @@ export default async (req, res) => {
         role: userFinded.role,
       };
 
-      console.log(credentials);
-      console.log({ databse: userFinded });
 
       return res
         .status(200)

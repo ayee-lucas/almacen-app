@@ -19,10 +19,10 @@
     "containerId": "",
     "name": "localhost:3000/api/Controllers/Users/Users",
     "url": "localhost:3000/api/Controllers/Users/Users",
-    "method": "POST",
+    "method": "GET",
     "sortNum": 0,
     "created": "2023-05-04T18:18:48.170Z",
-    "modified": "2023-05-04T18:25:52.403Z",
+    "modified": "2023-05-04T21:14:15.162Z",
     "headers": [],
     "params": [],
     "body": {
@@ -31,19 +31,19 @@
       "form": [
         {
           "name": "name",
-          "value": "Antonio"
+          "value": "Alberto"
         },
         {
           "name": "surname",
-          "value": "Segundo"
+          "value": "Morales"
         },
         {
           "name": "email",
-          "value": "antoniosegu@gmail.com"
+          "value": "albertmor@gmail.com"
         },
         {
           "name": "username",
-          "value": "antonn-323"
+          "value": "abert22"
         },
         {
           "name": "password",

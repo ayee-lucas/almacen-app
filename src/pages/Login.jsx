@@ -5,7 +5,7 @@ import { signIn } from "next-auth/react";
 const Login = () => {
 
  const userName = useRef("")
- const pass = useRef("")
+ const password = useRef("")
 
 
   const onSubmit = async (e) => {
@@ -14,9 +14,13 @@ const Login = () => {
     const result = await signIn("credentials", {
       username: userName.current,
       password: password.current,
-      redirect: false,
+      redirect: true,
+      callbackUrl: '/DashboardPage'
     })
+
   }
+
+  
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -79,7 +83,7 @@ const Login = () => {
                   autoComplete="current-password"
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6"
-                  onChange={(e) => (pass.current = e.target.value)}
+                  onChange={(e) => (password.current = e.target.value)}
                 />
               </div>
             </div>
@@ -88,7 +92,7 @@ const Login = () => {
               <button
                 type="submit"
                 className="flex w-full transition-all justify-center rounded-md bg-black px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-white hover:text-black hover:ring-black hover:ring-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                onClick={onSubmit}
+                onClick={(e) => onSubmit(e)}
               >
                 Sign in
               </button>

@@ -25,10 +25,11 @@ export const authOptions = {
       },
 
       async authorize(credentials, req) {
-        const { username, password } = credentials;
-
+        try {
+          const { username, password } = credentials;
+          /*
         const response = await axios.post(
-          "/api/auth/login",
+          "http://localhost:3000/api/auth/login",
           {
             username,
             password,
@@ -39,22 +40,32 @@ export const authOptions = {
             },
           }
         );
+        */
+          const res = await fetch("http://localhost:3000/api/auth/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              username,
+              password,
+            }),
+          });
 
-        const user = await res.json();
+          const user = await res.json();
 
-        console.log({ user });
+          console.log({ user });
 
-        if (response.ok && user) {
-          return user;
-        } else return null;
+          if (res.ok && user) {
+            return user;
+          } else return null;
+        } catch (err) {
+          console.log(err);
+          return null;
+        }
       },
     }),
   ],
-
-
-  session: {
-    strategy: "jwt",
-  },
 
   pages: {
     signIn: "/Login",
