@@ -1,18 +1,13 @@
 import React from "react";
 import Home from "@/components/Dashboard/Home";
 import SideBar from "@/components/Dashboard/SideBar";
+import Navbar from "@/components/Navbar";
 
 const DashboardPage = () => {
   return (
     <>
-    <div className="h-screen w-full">
-       {/* Home Component */}
-       <Home />
-
-{/* Sidebar Component */}
-<SideBar />
-    </div>
-     
+      <Navbar/>
+      <Home />
     </>
   );
 };
