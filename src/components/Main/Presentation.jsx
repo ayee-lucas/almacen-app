@@ -1,13 +1,14 @@
 import React from "react";
-import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
 import "animate.css";
 import DashboardPage from "@/pages/DashboardPage";
 
-//Icons
-import Link from 'next/link'
+import { AiOutlineDown } from "react-icons/ai";
+
+
 
 
 const Presentation = () => {
+
   return (
     <div className="bg-presentation w-full h-screen bg-cover bg-center bg-fixed overflow-hidden">
       <div className="absolute transition-all bg-black opacity-80 inset-0  bg-gradient-to-b from-black via-black gradient to-gray-800" />
@@ -21,10 +22,7 @@ const Presentation = () => {
             </h1>
             <div className="underline max-sm:hidden" />
             <h3 className="underline-label max-sm:hidden text-white jetbrains-mono text-center text-[15px]">
-              Almacenamos tu exito, cuidamos tus productos
-            </h3>
-          </div>
-          {/** Mobile Title */}
+              Almacenamos tu exito, cuidamos tus productos </h3> </div> {/** Mobile Title */}
           <div className="underline-container transition-all mb-44 text-white jetbrains-mono text-[60px] sm:hidden">
             <h1 className="underline-text animate__animated animate__slideInDown">
               BLACK
@@ -36,13 +34,6 @@ const Presentation = () => {
           </div>
           <div className="z-[2] max-sm:absolute max-sm:left-[30%] mt-20 max-sm:ml-4 flex justify-center">
             {/* Map Link */}
-            <Link
-              href={"/DashboardPage"}
-              className="bg-black py-3 px-10 rounded-[10px] relative flex justify-between items-center"
-            >
-              <h1 className="text-white jetbrains-mono">Mapa</h1>
-              <AiOutlineRight className="text-white absolute right-1 right-animation" />
-            </Link>
           </div>
         </div>
       </div>
