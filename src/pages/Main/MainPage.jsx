@@ -6,6 +6,7 @@ import Separator from "@/components/Main/Separator";
 import SeparatorVideo from "@/components/Main/SeparatorVideo";
 import Footer from "@/components/Main/Footer";
 
+
 export const AnimationContext = createContext();
 
 const MainPage = () => {

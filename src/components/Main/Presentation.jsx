@@ -5,6 +5,8 @@ import { AiOutlineDown } from "react-icons/ai";
 
 
 
+
+
 const Presentation = () => {
 
   return (
@@ -31,8 +33,6 @@ const Presentation = () => {
             </h1>
           </div>
           <div className="z-[2] max-sm:absolute max-sm:left-[30%] mt-20 max-sm:ml-4 flex justify-center">
-            {/* Map Link */}
-
           </div>
         </div>
       </div>

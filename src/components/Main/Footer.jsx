@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../assets/Logos/blackbox.jpeg"
+import Logo from "../../assets/Logos/blackboxText.png"
 
 const Footer = () => {
   return (
