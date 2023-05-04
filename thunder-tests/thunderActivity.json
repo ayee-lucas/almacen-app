@@ -1,30 +1,116 @@
 [
   {
-    "_id": "fb1bfc23-b38b-4436-be0b-4f6abc92bc1a",
+    "_id": "1c38c60a-d4ae-4713-8f51-163f4022d6a0",
     "colId": "history",
     "containerId": "",
-    "name": "http://localhost:3000/api/src/Clients/clients.routes",
-    "url": "http://localhost:3000/api/Controllers/Clients/Test",
+    "name": "localhost:3000/api/Controllers/Users/Users",
+    "url": "localhost:3000/api/Controllers/Users/Users",
     "method": "GET",
     "sortNum": 0,
-    "created": "2023-04-26T01:08:50.736Z",
-    "modified": "2023-04-26T02:43:40.003Z",
+    "created": "2023-05-04T17:55:48.386Z",
+    "modified": "2023-05-04T17:55:48.386Z",
     "headers": [],
     "params": [],
     "tests": []
   },
   {
-    "_id": "0219a53c-4b89-411d-93e9-2376f9f19ede",
+    "_id": "3cbdaed2-7631-4b48-9a15-1eed98fd4275",
     "colId": "history",
     "containerId": "",
-    "name": "http://localhost:3000/api/",
-    "url": "http://localhost:3000/api/",
-    "method": "GET",
+    "name": "localhost:3000/api/Controllers/Users/Users",
+    "url": "localhost:3000/api/Controllers/Users/Users",
+    "method": "POST",
     "sortNum": 0,
-    "created": "2023-04-26T01:53:09.770Z",
-    "modified": "2023-04-26T01:53:09.770Z",
+    "created": "2023-05-04T18:18:48.170Z",
+    "modified": "2023-05-04T18:25:52.403Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Antonio"
+        },
+        {
+          "name": "surname",
+          "value": "Segundo"
+        },
+        {
+          "name": "email",
+          "value": "antoniosegu@gmail.com"
+        },
+        {
+          "name": "username",
+          "value": "antonn-323"
+        },
+        {
+          "name": "password",
+          "value": "123"
+        },
+        {
+          "name": "role",
+          "value": "EMPLOYEE"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "5ecf78b1-38c5-4b87-9440-563d931c66a1",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/api/Controllers/auth/login",
+    "url": "localhost:3000/api/Controllers/auth/login",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-04T18:34:38.934Z",
+    "modified": "2023-05-04T18:34:38.934Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "c96502d1-e10c-4997-9fbc-ada8c385d9bc",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/api/auth/login",
+    "url": "localhost:3000/api/auth/login",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-04T18:35:36.980Z",
+    "modified": "2023-05-04T18:35:36.980Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "74e282c2-8dc4-4be8-b175-fa82f25c129e",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/api/auth/login",
+    "url": "localhost:3000/api/auth/login",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-04T18:35:44.949Z",
+    "modified": "2023-05-04T19:14:14.014Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "username",
+          "value": "antonn-323"
+        },
+        {
+          "name": "password",
+          "value": "123"
+        }
+      ]
+    },
     "tests": []
   }
 ]
