@@ -27,20 +27,7 @@ export const authOptions = {
       async authorize(credentials, req) {
         try {
           const { username, password } = credentials;
-          /*
-        const response = await axios.post(
-          "http://localhost:3000/api/auth/login",
-          {
-            username,
-            password,
-          },
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        */
+
           const res = await fetch("http://localhost:3000/api/auth/login", {
             method: "POST",
             headers: {
@@ -69,7 +56,12 @@ export const authOptions = {
 
   pages: {
     signIn: "/Login",
+    error: '/Login'
   },
+
+  database: process.env.MONGO_URI,
+
+  
 };
 
 export default NextAuth(authOptions);
