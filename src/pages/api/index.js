@@ -1,7 +1,7 @@
 
-import {connect} from "./configs/mongo"
+import {connectdb} from "./configs/mongo"
 
-connect();
+connectdb();
 
 export default function handler(req, res) {
     res.status(200).json({ name: 'John Doe' })
