@@ -7,7 +7,7 @@ const RedirectBtn = ({ isSecondVisible }) => {
   return (
     <div className="fixed bottom-10 right-10 z-50 max-sm:w-[full] max-sm:inset-x-1 max-sm:bottom-5 ">
       <Link
-        href={"/"}
+        href={"/Warehouse"}
         className={
           !isSecondVisible
             ? "hidden"
