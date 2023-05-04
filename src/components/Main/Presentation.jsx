@@ -10,7 +10,7 @@ import { AiOutlineDown } from "react-icons/ai";
 const Presentation = () => {
 
   return (
-    <div className="bg-presentation w-full h-[100svh] bg-cover bg-center bg-fixed overflow-hidden">
+    <div className="bg-presentation w-full h-[100svh] bg-cover bg-center overflow-hidden">
       <div className="absolute transition-all bg-black opacity-80 inset-0  bg-gradient-to-b from-black via-black gradient to-gray-800" />
       <div className="absolute bg-black inset-0 opacity-10" />
       <div className="flex items-center w-full h-full sm:justify-center">
