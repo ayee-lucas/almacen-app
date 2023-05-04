@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { signIn } from "next-auth/react";
+import Logo from "../assets/Logos/blackboxText.png"
+
+
 
 const Login = () => {
 
@@ -29,7 +32,7 @@ const Login = () => {
             width={400}
             height={400}
             className="mx-auto max-sm:w-[200px] "
-            src="https://firebasestorage.googleapis.com/v0/b/almacen-app-d3ca2.appspot.com/o/logos%2FblackboxText.png?alt=media&token=39c24596-cb2a-408d-8b66-42e41ab9ad89"
+            src={Logo}
             alt="BlackBox"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
