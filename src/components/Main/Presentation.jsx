@@ -22,7 +22,7 @@ const Presentation = () => {
             </h1>
             <div className="underline max-sm:hidden" />
             <h3 className="underline-label max-sm:hidden text-white jetbrains-mono text-center text-[15px]">
-              Almacenamos tu exito, cuidamos tus productos </h3> </div> {/** Mobile Title */}
+              We store your success, we take care of your products. </h3> </div> {/** Mobile Title */}
           <div className="underline-container transition-all mb-44 text-white jetbrains-mono text-[60px] sm:hidden">
             <h1 className="underline-text animate__animated animate__slideInDown">
               BLACK
@@ -40,7 +40,7 @@ const Presentation = () => {
       <div className="flex justify-center items-center w-full bounce-animation">
         <div className="absolute bottom-9">
           <h1 className="text-white text-sm tracking-widest jetbrains-mono pb-1">
-            Mas Informacion
+            Explore further
           </h1>
           <AiOutlineDown className="text-white absolute left-[45%]" />
         </div>
