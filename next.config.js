@@ -7,7 +7,12 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
-
-
-module.exports = withVideos()
+module.exports = withVideos({
+  images: {
+    domains: [
+      'cdn-icons-png.flaticon.com',
+      'images.unsplash.com',
+      'firebasestorage.googleapis.com',
+    ]
+  },
+})
