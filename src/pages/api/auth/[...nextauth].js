@@ -28,7 +28,11 @@ export const authOptions = {
         try {
           const { username, password } = credentials;
 
-          const res = await fetch("http://localhost:3000/api/auth/login", {
+          const authURL  = `${process.env.NEXTAUTH_URL}/api/auth/login`;
+
+          console.log({ authURL });
+
+          const res = await fetch(authURL, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
