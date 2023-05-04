@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState, createContext, use } from "react";
 import RedirectBtn from "@/components/Main/RedirectBtn";
+import LoginBtn from "@/components/Main/LoginBtn";
 import Presentation from "@/components/Main/Presentation";
 import AboutPage from "@/components/Main/AboutPage";
 import Separator from "@/components/Main/Separator";
@@ -16,7 +17,7 @@ const MainPage = () => {
 
   const [isSecondVisible, setIsSecondVisible] = useState(false);
 
-  const [toggleVisible, setToggleVisible] = useState('hidden');
+  const [toggleVisible, setToggleVisible] = useState("hidden");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -59,13 +60,12 @@ const MainPage = () => {
       observer.disconnect();
     };
   }, []);
-  
+
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setToggleVisible('visible');
-    },  3000);
+      setToggleVisible("visible");
+    }, 3000);
   }, []);
-
 
   const setRefs = (ref, index) => {
     animationRef.current[index] = ref;
@@ -83,16 +83,17 @@ const MainPage = () => {
       {/* Presentation Component */}
       <Presentation />
       <RedirectBtn isSecondVisible={isSecondVisible} />
+      <LoginBtn isSecondVisible={isSecondVisible} />
       <AnimationContext.Provider value={contextValue}>
         <div className={toggleVisible}>
-        {/* Separator */}
-        <Separator />
-        {/* Video Separator */}
-        <SeparatorVideo />
-        {/* About Page Component */}
-        <AboutPage />
+          {/* Separator */}
+          <Separator />
+          {/* Video Separator */}
+          <SeparatorVideo />
+          {/* About Page Component */}
+          <AboutPage />
 
-      <Footer />
+          <Footer />
         </div>
       </AnimationContext.Provider>
     </>

@@ -1,28 +1,64 @@
-import NextAuth from "next-auth"
-import GithubProvider from "next-auth/providers/github"
+import CredentialsProvider from "next-auth/providers/credentials";
+import axios from "axios";
+import NextAuth from "next-auth";
+import { User } from "next-auth";
+
 export const authOptions = {
-  // Configure one or more authentication providers
   providers: [
-    GithubProvider({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
+    CredentialsProvider({
+      // The name to display on the sign in form (e.g. "Sign in with...")
+      name: "Credentials",
+      // `credentials` is used to generate a form on the sign in page.
+      // You can specify which fields should be submitted, by adding keys to the `credentials` object.
+      // You can pass any HTML attribute to the <input> tag through the object.
+      credentials: {
+        username: {
+          label: "Username",
+          type: "text",
+          placeholder: "username",
+        },
+
+        password: {
+          label: "Password",
+          type: "password",
+        },
+      },
+
+      async authorize(credentials, req) {
+        const { username, password } = credentials;
+
+        const response = await axios.post(
+          "/api/auth/login",
+          {
+            username,
+            password,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        const user = await res.json();
+
+        console.log({ user });
+
+        if (response.ok && user) {
+          return user;
+        } else return null;
+      },
     }),
-    // ...add more providers here
   ],
 
-  callbacks: {
-    async jwt({ token, account }) {
-      // Persist the OAuth access_token to the token right after signin
-      if (account) {
-        token.accessToken = account.access_token
-      }
-      return token
-    },
-    async session({ session, token, user }) {
-      // Send properties to the client, like an access_token from a provider.
-      session.accessToken = token.accessToken
-      return session
-    }
-  }
-}
-export default NextAuth(authOptions)
+
+  session: {
+    strategy: "jwt",
+  },
+
+  pages: {
+    signIn: "/Login",
+  },
+};
+
+export default NextAuth(authOptions);
