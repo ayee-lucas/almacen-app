@@ -4,18 +4,13 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100svh;
+  height: 100%;
   margin: 0;
   font-family: "Raleway", sans-serif;
 }
 
 body {
   margin: 0;
-  height: 100svh;
-}
-
-main{
-  height: 100svh;
 }
 
 .ropa-sans {
