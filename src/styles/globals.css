@@ -26,7 +26,7 @@ body {
 }
 
 .bg-presentation {
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/almacen-app-d3ca2.appspot.com/o/backgrounds%2Fbg_presentation.jpg?alt=media&token=70358c6a-1790-4b03-857e-096e4eeb6723");
+  background-image: url("../assets/Backgrounds/bg_presentation.jpg");
 }
 
 .ubuntu {
