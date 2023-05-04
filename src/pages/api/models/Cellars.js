@@ -23,6 +23,7 @@ const cellarSchema = new mongoose.Schema({
     state: {
         type: String,
         required: true,
+        upperCase: true
     },
     price: {
         type: Number,
@@ -32,6 +33,7 @@ const cellarSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId, ref: 'Clients'
         
     }
+
 });
 
 // Create the Cellar model
