@@ -1,12 +1,13 @@
 import { connectdb } from "../../configs/mongo";
 import Cellars from "../../models/Cellars";
-import { getSession } from "next-auth/react";
+import { getServerSession } from '#auth'
 
 connectdb();
 
 export default async function handler(req, res) {
   const { method, body, query: { id } } = req;
   const session = await getSession({ req });
+
 
   switch (method) {
     case "POST":
