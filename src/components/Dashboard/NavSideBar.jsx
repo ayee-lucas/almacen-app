@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const NavSideBar = ({icon, name}) => {
   return (
     <>
