@@ -1,15 +1,26 @@
 import { connectdb } from "../../configs/mongo";
 import Cellars from "../../models/Cellars";
-import { getServerSession } from '#auth'
+
+import Clients from "../../models/Clients";
+
 
 connectdb();
 
 export default async function handler(req, res) {
   const { method, body, query: { id } } = req;
-  const session = await getSession({ req });
-
 
   switch (method) {
+    case "GET":
+      try {
+        const cellars = await Cellars.find();
+        if (!cellars || cellars.length === 0) {
+          return res.send({ message: "There is no Cellars to show" });
+        }
+        return res.status(200).json(cellars);
+      } catch (error) {
+        return res.status(500).json({ error: error.message });
+      }
+
     case "POST":
       try {
         if (session.logged.role !== 'admin') {

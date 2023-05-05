@@ -1,20 +1,18 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
+import CellarTable from "@/components/Cellar/CellarTable";
 
-import UsersTable from "@/components/User/UsersTable";
-
-
-const Users= () =>{
+const Cellar = () =>{
     return(
         <>
             <div className="dark:bg-gray-800 h-full">
                 <Navbar/>
                 <div className="dark:bg-gray-800">
                     <div className="text-white dark:bg-gray-800 h-20 jetbrains-mono font-semibold text-[35px] p-5">
-                        <h1 className="flex justify-center">CLIENTS</h1>
+                        <h1 className="flex justify-center">CELLAR</h1>
                     </div>
                     <div className="p-10"> 
-                        <UsersTable/>
+                        <CellarTable/>
                     </div>
                 </div>
             </div>
@@ -22,4 +20,4 @@ const Users= () =>{
     );
 }
 
-export default Users;
+export default Cellar;
