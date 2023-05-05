@@ -24,17 +24,18 @@ export default async function handler(req, res) {
         case "POST":
             try {
                 const { cellar, client, service } = req.body;
+            
+                // Validate required data
+                if (!cellar || !client) {
+                    return res.status(400).json({ message: "Both cellar and client are required for the lease" });
+                }
+            
                 // Verify if the cellar is available
                 const availableCellar = await Cellars.findOne({ _id: cellar, state: "AVAILABLE" });
                 if (!availableCellar) {
                     return res.status(400).json({ message: "The selected cellar is not available" });
                 }
-
-                // Verify that at least cellar and user are entered
-                if (!cellar || !client) {
-                    return res.status(400).json({ message: "The cellar and user are required for the lease" });
-                }
-
+            
                 // Create new lease
                 const newLease = new Lease({
                     cellar,
@@ -42,17 +43,18 @@ export default async function handler(req, res) {
                     service: service || [],
                     date: Date.now()
                 });
-
+            
                 // Save lease to database
                 await newLease.save();
-
+            
                 // Change cellar state to unavailable
-                await Cellars.findByIdAndUpdate(cellar, { estado: "unavailable" }, { new: true });
-
-                res.status(201).json({ message: "Lease added successfully", arrendamiento: newLease });
+                await Cellars.findByIdAndUpdate(cellar, { state: "UNAVAILABLE" }, { new: true });
+            
+                res.status(201).json({ message: "Lease added successfully", lease: newLease });
             } catch (error) {
                 res.status(500).json({ message: error.message });
             }
+            
         default:
             return res.status(400).json({ msg: "This method is not supported" })
     }
