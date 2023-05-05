@@ -10,7 +10,7 @@ const Dashboard = () => {
 
 
   return (
-      <div className="bg-[E0E0E0] h-screen">
+   <div className="bg-[E0E0E0] h-screen">
         <Navbar/>
         <Home/>
       </div>
