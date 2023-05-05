@@ -75,9 +75,6 @@ export const authOptions = {
     signIn: "/auth/signedIn",
     singOut: "/auth/signedIn"
   },
-
-
-  
 };
 
 export default NextAuth(authOptions);
