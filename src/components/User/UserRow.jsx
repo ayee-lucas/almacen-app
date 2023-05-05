@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import user from "../../assets/img/user.png";
 
-const Row = ({username, name, surname, email, role}) => {
+const UserRow = ({username, name, surname, email, role}) => {
 
     return(
         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -32,4 +32,4 @@ const Row = ({username, name, surname, email, role}) => {
     );
 }
 
-export default Row;
+export default UserRow;

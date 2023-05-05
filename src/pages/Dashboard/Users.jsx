@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import UsersTable from "@/components/Client/UsersTable";
+import UsersTable from "@/components/User/UsersTable";
 
 const Users= () =>{
     return(

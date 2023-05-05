@@ -1,5 +1,5 @@
 import React from "react";
-import Row from "./Row";
+import UserRow from "./UserRow";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import _ from 'lodash'
@@ -61,14 +61,14 @@ const UsersTable = () => {
           <tbody>
             {users.map(({ username, name, surname, email, role }, i) => {
               return (
-                <Row
+                <UserRow
                   key={i}
                   username={username}
                   name={name}
                   surname={surname}
                   email={email}
                   role={role}
-                ></Row>
+                ></UserRow>
               );
             })}
           </tbody>
