@@ -17,8 +17,8 @@ const Home = () => {
                 <div className="bg-[#E0E0E0] flex justify-around">
 
                     <div className="w-[65%]">
-                        <div className="">
-                            <dl className="grid grid-cols-3 text-center max-lg:grid-cols-2">
+                        <div class="">
+                            <dl class="grid grid-cols-3 text-center max-lg:grid-cols-2">
                                 <Stat/>
                                 <Stat/>
                                 <div className="p-4 h-64 max-lg:hidden">
@@ -30,8 +30,8 @@ const Home = () => {
                                 </div>
                             </dl>
                         </div>
-                        <div className="">
-                            <dl className="grid grid-cols-2 text-center max-lg:grid-cols-1">
+                        <div class="">
+                            <dl class="grid grid-cols-2 text-center max-lg:grid-cols-1">
                                 <LargeStat/>
                                 <LargeStat/>
                             </dl>
