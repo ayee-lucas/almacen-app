@@ -1,7 +1,8 @@
 import CredentialsProvider from "next-auth/providers/credentials";
-import axios from "axios";
 import NextAuth from "next-auth";
-import { User } from "next-auth";
+import { connectdb } from "../configs/mongo";
+
+connectdb();
 
 export const authOptions = {
   providers: [
@@ -28,7 +29,7 @@ export const authOptions = {
         try {
           const { username, password } = credentials;
 
-          const authURL  = `${process.env.NEXTAUTH_URL}/api/auth/login`;
+          const authURL = `${process.env.NEXTAUTH_URL}/api/auth/login`;
 
           console.log({ authURL });
 
@@ -58,12 +59,21 @@ export const authOptions = {
     }),
   ],
 
+  callbacks: {
+    async jwt({ token, user }) {
+      return { ...token, ...user };
+    },
+    async session({ session, token, user }) {
+      // Send properties to the client, like an access_token from a provider.
+      session.user = token;
+
+      return session;
+    },
+  },
+
   pages: {
     signIn: "/Login",
   },
-
-
-  
 };
 
 export default NextAuth(authOptions);
