@@ -2,57 +2,88 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <div className="h-screen w-full bg-presentationAboutPage bg-cover max-sm:bg-center max-lg:h-full lg:h-full">
-      <div className="relative h-full w-full">
-        <div
-          className="absolute transition-all bg-black inset-0 opacity-70 
-                        max-sm:opacity-70 max-sm:bg-gradient-to-b max-sm:from-black max-sm:via-black gradient"
+    <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+      <div className="lg:w-10/12 w-full">
+        <p className="font-normal text-sm leading-3 text-black hover:text-indigo-800 cursor-pointer">
+          About
+        </p>
+        <h2 className="xl:w-8/12 lg:w-10/12 w-full font-bold text-gray-800 lg:text-4xl text-3xl lg:leading-10 leading-9 mt-2">
+          At our company, we are committed to providing safe and flexible
+          storage solutions for our clients.
+        </h2>
+        <p className="font-normal text-base leading-6 text-gray-600 mt-6">
+          We understand the importance of security and proper handling of goods,
+          and that is why we offer a comprehensive range of amenities and
+          services to complement your storage experience. With years of
+          experience, we have built a reputation as a trusted partner in the
+          management and storage of our clients' goods. You can trust us to
+          store your products and focus on growing your business without
+          worries. Contact us today to learn more about our services and
+          discover how we can help you with your storage needs.
+        </p>
+      </div>
+
+      <div className="lg:mt-14 sm:mt-10 mt-12">
+        <img
+          className="lg:block hidden w-full h-[350px] object-cover"
+          src="https://images.unsplash.com/photo-1590755098163-d34c72438301?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+          alt="Group of people Chilling"
         />
-        <div className="absolute transition-all bg-black inset-0 opacity-0 max-sm:opacity-60" />
-        <div className="underline-container">
-          <h1
-            className="pl-20 pt-20 underline-text text-white merryweather tracking-tighter text-[80px] font-light
-                       max-sm:text-[50px] max-sm:pl-8 max-sm:pt-8 max-lg:text-[70px]"
-          >
-            Nosotros
-            <div className="bg-white w-80 h-px max-sm:ml-0 max-sm:w-40 max-lg:w-60" />
-          </h1>
+        <img
+          className="lg:hidden sm:block hidden w-full"
+          src="https://images.unsplash.com/photo-1590755098163-d34c72438301?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+          alt="Group of people Chilling"
+        />
+        <img
+          className="sm:hidden block w-full"
+          src="https://images.unsplash.com/photo-1590755098163-d34c72438301?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+          alt="Group of people Chilling"
+        />
+      </div>
+
+      <div className="lg:mt-16 sm:mt-12 mt-16 flex lg:flex-row justify-between flex-col lg:gap-8 gap-12">
+        <div className="w-full xl:w-5/12 lg:w-6/12">
+          <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800">
+            Our Story
+          </h2>
+          <p className="font-normal text-base leading-6 text-gray-600 mt-4">
+            As we grew, we realized that providing a complete and satisfactory
+            storage experience for our clients meant more than just secure
+            storage. We wanted to create a space where businesses could store
+            their goods with ease and efficiency while enjoying a range of
+            amenities that made their lives easier.
+          </p>
+          <p className="font-normal text-base leading-6 text-gray-600 mt-6">
+            We invested in advanced security systems, implemented inventory
+            management tools, and offered customized insurance options to meet
+            the unique needs of our clients. Our commitment to exceptional
+            service has earned us a reputation as a trusted partner in the
+            management and storage of goods.
+            <br />
+            <br /> Today, we continue to innovate and adapt to the evolving
+            needs of businesses. We are proud to offer a range of storage
+            solutions that cater to businesses of all sizes, from startups to
+            established enterprises. Our mission remains the same: to provide
+            safe and reliable storage solutions that allow our clients to focus
+            on growing their business.
+          </p>
         </div>
-        <div
-          className="relative flex justify-between p-20 pb-16 text-[20px] max-lg:pt-16 max-lg:pb-32
-                     max-sm:-pb-10 max-sm:grid max-sm:grid-rows-2 max-sm:gap-1 max-sm:p-0 max-sm:px-3 max-sm:py-8 max-sm:pb-32 max-sm:text-[15px]"
-        >
-          <div className="text-justify pr-36 max-lg:pr-12 max-sm:px-4 max-sm:text-sm">
-            <h2 className=" text-white ubuntu text-[40px] max-lg:text-[28px]">
-              Historia
-            </h2>
-            <p className=" text-white tracking-wider mt-5 max-lg:text-[16px] max-lg:mt-7">
-              Nuestra historia se remonta a hace más de una década, cuando un
-              grupo de emprendedores decidió crear una empresa dedicada a
-              ofrecer soluciones de almacenamiento flexibles y seguras para
-              negocios de todos los tamaños.<br/> A lo largo de los años, hemos
-              crecido y evolucionado junto con nuestros clientes, adaptándonos a
-              las necesidades cambiantes del mercado y expandiendo nuestros
-              servicios a nuevas áreas geográficas.<br/> Hoy en día, somos una
-              empresa líder en el sector de alquiler de bodegas y
-              almacenamiento, y seguimos comprometidos con nuestra misión de
-              ofrecer soluciones de calidad y confiables a nuestros clientes en
-              todo momento.
-            </p>
-          </div>
-          <div className="text-justify max-sm:px-4 max-sm:mt-4">
-            <h2 className=" text-white ubuntu text-[40px] max-lg:text-[28px]">
-              Que hacemos por ti?
-            </h2>
-            <p className=" text-white tracking-wider mt-5 max-lg:text-[16px] max-lg:mt-7">
-              Ofrecemos un amplio rango de servicios de almacenamiento y
-              trabajamos con cada cliente para personalizar nuestros servicios y
-              adaptarnos a sus necesidades específicas. Nos esforzamos por
-              brindar un servicio excepcional y estamos dedicados a garantizar
-              que cada cliente se sienta satisfecho con nuestros servicios de
-              almacenamiento.
-            </p>
-          </div>
+        <div className="lg:flex items-center w-full lg:w-1/2 ">
+          <img
+            className="lg:block hidden w-full"
+            src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+            alt="people discussing on board"
+          />
+          <img
+            className="lg:hidden sm:block hidden w-full h-3/4"
+            src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+            alt="people discussing on board"
+          />
+          <img
+            className="sm:hidden block w-full"
+            src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+            alt="people discussing on board"
+          />
         </div>
       </div>
     </div>
