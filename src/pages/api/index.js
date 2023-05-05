@@ -1,8 +1,1 @@
-
-import {connectdb} from "./configs/mongo"
-
-connectdb();
-
-export default function handler(req, res) {
-    res.status(200).json({ name: 'John Doe' })
-}    
+import cookie from "cookie";
