@@ -16,7 +16,7 @@ const Login = () => {
       username: userName.current,
       password: password.current,
       redirect: true,
-      callbackUrl: "/DashboardPage",
+      callbackUrl: "/Dashboard",
     });
   };
 
