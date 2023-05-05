@@ -29,7 +29,7 @@ export const authOptions = {
         try {
           const { username, password } = credentials;
 
-          const authURL = `${process.env.NEXTAUTH_URL}/api/auth/login`;
+          const authURL = `${process.env.NEXTAUTH_URL}api/auth/login`;
 
           console.log({ authURL });
 
