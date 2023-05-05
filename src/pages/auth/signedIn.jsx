@@ -15,7 +15,7 @@ const signedIn = () => {
       void router.push("/Login")
       
     } else if (status === "authenticated"){
-      void router.push("/DashboardPage");
+      void router.push("/Dashboard");
     }
   }, [status]);
 
