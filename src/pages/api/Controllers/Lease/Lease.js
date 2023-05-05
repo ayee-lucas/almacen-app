@@ -10,6 +10,17 @@ connectdb();
 export default async function handler(req, res) {
     const { method, body, query: { id } } = req;
     switch (method) {
+        case "GET":
+            try {
+                const leases = await Lease.find();
+                if(!leases || leases.length === 0){
+                    return res.send({message: "There is no leases to show"})
+                }
+                return res.status(200).json(leases);
+            } catch (error) {
+                res.status(500).json({ message: error.message });
+            }
+        
         case "POST":
             try {
                 const { cellar, client, service } = req.body;

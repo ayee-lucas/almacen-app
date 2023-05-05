@@ -3,7 +3,7 @@
 import mongoose from "mongoose";
 
 // Define the Lease Schema
-const clientSchema = new moongose.Schema({
+const clientSchema = new mongoose.Schema({
     cellar: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Cellar',
