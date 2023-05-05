@@ -1,6 +1,9 @@
 import { connectdb } from "../../configs/mongo";
 import Cellars from "../../models/Cellars";
 
+import Clients from "../../models/Clients";
+
+
 connectdb();
 
 export default async function handler(req, res) {

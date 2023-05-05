@@ -19,10 +19,10 @@
     "containerId": "",
     "name": "localhost:3000/api/Controllers/Users/Users",
     "url": "localhost:3000/api/Controllers/Users/Users",
-    "method": "GET",
+    "method": "POST",
     "sortNum": 0,
     "created": "2023-05-04T18:18:48.170Z",
-    "modified": "2023-05-04T21:14:15.162Z",
+    "modified": "2023-05-05T06:36:33.963Z",
     "headers": [],
     "params": [],
     "body": {
@@ -31,19 +31,19 @@
       "form": [
         {
           "name": "name",
-          "value": "Alberto"
+          "value": "Pancho"
         },
         {
           "name": "surname",
-          "value": "Morales"
+          "value": "Smith"
         },
         {
           "name": "email",
-          "value": "albertmor@gmail.com"
+          "value": "pSmith22@gmail.com"
         },
         {
           "name": "username",
-          "value": "abert22"
+          "value": "pSmith"
         },
         {
           "name": "password",
@@ -111,6 +111,62 @@
         }
       ]
     },
+    "tests": []
+  },
+  {
+    "_id": "aa75e970-1fa1-443d-9d07-301ab9244dab",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/api/Controllers/Cellars",
+    "url": "localhost:3000/api/Controllers/Cellars",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-05T04:35:38.303Z",
+    "modified": "2023-05-05T04:35:38.303Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "3726a6c1-95f0-4bf8-b58f-ae95efb9a02b",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/api/Controllers/Cellars/Cellars",
+    "url": "localhost:3000/api/Controllers/Cellars/Cellars",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-05T04:36:00.587Z",
+    "modified": "2023-05-05T04:36:00.587Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "ef92dd71-fff0-40d7-960f-f72ef6f6f6a5",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/api/Controllers/Cellars/Cellars",
+    "url": "localhost:3000/api/Controllers/Cellars/Cellars",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-05T04:54:37.948Z",
+    "modified": "2023-05-05T04:54:37.948Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "bb6820f5-fa54-4f33-b59e-1470b88c573e",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/api/",
+    "url": "localhost:3000/api/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-05T04:56:03.321Z",
+    "modified": "2023-05-05T04:56:03.321Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]
