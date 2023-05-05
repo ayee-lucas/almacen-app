@@ -14,13 +14,14 @@ import { DashboardContext } from "@/pages/Dashboard";
 
 const SideBar = () => {
   const { nav, handleNav } = useContext(DashboardContext);
-
   return (
     <>
-
-      <div className={
-        nav ? "absolute inset-0 bg-black z-40 opacity-50 max-sm:hidden" : "absolute inset-0 bg-black -z-50 opacity-0  max-sm:hidden"
-      }
+      <div
+        className={
+          nav
+            ? "absolute inset-0 bg-black z-40 opacity-50 max-sm:hidden"
+            : "absolute inset-0 bg-black -z-50 opacity-0  max-sm:hidden"
+        }
       />
       <nav
         className={
@@ -37,15 +38,15 @@ const SideBar = () => {
             </h1>
           </div>
           <AiOutlineClose
-          onClick={handleNav}
-          className="text-white text-[30px] cursor-pointer" />
+            onClick={handleNav}
+            className="text-white text-[30px] cursor-pointer"
+          />
         </div>
         <div className="h-[95%] p-2 text-white k2d font-light text-[20px]">
           <div className="pt-20">
             <NavSideBar name={"Home"} icon={<AiOutlineHome />} />
             <NavSideBar name={"Bodega"} icon={<AiOutlineDatabase />} />
-            <NavSideBar name={"Sucursal"} icon={<AiOutlineShop />} />
-            <NavSideBar name={"Clientes"} icon={<AiOutlineUser />} />
+            <NavSideBar name={"Users"} icon={<AiOutlineUser />} />
           </div>
 
           <div className="absolute bottom-10">

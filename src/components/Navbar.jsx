@@ -6,7 +6,9 @@ import logo from "../assets/Logos/blackboxDark.png";
 import { DashboardContext } from "@/pages/Dashboard";
 
 const Navbar = () => {
-  const {nav, handleNav} = useContext(DashboardContext);
+
+  const { nav, handleNav } = useContext(DashboardContext);
+
   return (
     <>
       <div className="flex h-[60px] w-full bg-black top-0 left-0 right-0">
