@@ -25,15 +25,14 @@ const userSchema = new moongose.Schema({
         required: true,
     },
     role: {
-        type: Number,
-        required: true,
+        type: String,
         upperCase: true,
         default: 'EMPLOYEE'
     }
 });
 
 // Create the Cellar model
-const User = moongose.models.User || moongose.model("User", cellarSchema);
+const User = moongose.models.User || moongose.model("User", userSchema);
 
 // Export the cellar model
 export default User;
