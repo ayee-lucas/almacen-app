@@ -72,7 +72,8 @@ export const authOptions = {
   },
 
   pages: {
-    signIn: "/Login",
+    signIn: "/auth/signedIn",
+    singOut: "/auth/signedIn"
   },
 };
 
