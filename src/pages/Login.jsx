@@ -1,29 +1,29 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
-import { signIn } from "next-auth/react";
-import Logo from "../assets/Logos/blackboxText.png"
-
-
+import { signIn, useSession } from "next-auth/react";
+import Logo from "../assets/Logos/blackboxText.png";
 
 const Login = () => {
+  const userName = useRef("");
+  const password = useRef("");
 
- const userName = useRef("")
- const password = useRef("")
-
+  const { status } = useSession();
 
   const onSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     const result = await signIn("credentials", {
       username: userName.current,
       password: password.current,
       redirect: true,
-      callbackUrl: '/DashboardPage'
-    })
+      callbackUrl: "/DashboardPage",
+    });
+  };
 
+  if (status === "authenticated") {
+    signIn("credentials");
   }
 
-  
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -56,7 +56,7 @@ const Login = () => {
                   type="text"
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6"
-                  onChange={(e) => userName.current = e.target.value}
+                  onChange={(e) => (userName.current = e.target.value)}
                 />
               </div>
             </div>
