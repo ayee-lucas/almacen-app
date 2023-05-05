@@ -105,6 +105,10 @@ body {
   -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
+.user-image{
+  border-radius: 50%;
+}
+
 /* max-sm */
 
 @media not all and (min-width: 640px) {
