@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import ClientTable from "@/components/Client/ClientTable";
+import UsersTable from "@/components/Client/UsersTable";
 
-const Client= () =>{
+const Users= () =>{
     return(
         <>
             <div className="dark:bg-gray-800 h-full">
@@ -12,7 +12,7 @@ const Client= () =>{
                         <h1 className="flex justify-center">CLIENTS</h1>
                     </div>
                     <div className="p-10"> 
-                        <ClientTable/>
+                        <UsersTable/>
                     </div>
                 </div>
             </div>
@@ -20,4 +20,4 @@ const Client= () =>{
     );
 }
 
-export default Client;
+export default Users;
