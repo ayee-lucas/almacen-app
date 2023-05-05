@@ -3,13 +3,13 @@ import Home from "@/components/Dashboard/Home";
 import SideBar from "@/components/Dashboard/SideBar";
 import Navbar from "@/components/Navbar";
 
-const DashboardPage = () => {
+const Dashboard = () => {
   return (
-    <>
-      <Navbar/>
-      <Home />
-    </>
+      <div className="bg-[E0E0E0] h-screen">
+        <Navbar/>
+        <Home/>
+      </div>
   );
 };
 
-export default DashboardPage;
+export default Dashboard;
