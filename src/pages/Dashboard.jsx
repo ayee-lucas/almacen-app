@@ -8,8 +8,6 @@ const Dashboard = () => {
 
   const { status } = useSession();
 
-
-
     useEffect(() => {
     if (status === "unauthenticated") {
       signIn("credentials");
@@ -17,7 +15,7 @@ const Dashboard = () => {
   }, [status]);
 
   return (
-      <div className="bg-[E0E0E0] h-screen">
+   <div className="bg-[E0E0E0] h-screen">
         <Navbar/>
         <Home/>
       </div>
