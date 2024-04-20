@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
+import bg from '@/assets/Backgrounds/bg_warehouse.jpg'
+import Image from "next/image";
 import { AnimationContext } from "@/pages/Main/MainPage";
-import videourl from "../../assets/Backgrounds/videobg.mp4";
 
 
 
@@ -10,13 +11,13 @@ const SeparatorVideo = () => {
   const { setRefs, isVisible } = useContext(AnimationContext);
 
   return (
-    <div className="h-screen w-full grid grid-rows-2 place-items-center items-center min-h-[100vh] bg-black text-white max-sm:grid-rows-1">
-      <video
-        src={videourl}
-        autoPlay muted loop
-        className="relative w-full h-full object-cover max-sm:hidden"
-      ></video>
-      <div className="flex flex-col justify-center items-center ml-10 p-20 max-sm:p-4 max-sm:ml-0 ">
+    <div className="h-[50dvh] w-full place-items-center items-center  bg-black text-white max-sm:grid-rows-1 relative">
+      <Image
+      src={bg}
+      fill
+      className="absolute inset-0 w-full h-full object-cover object-center"
+       />
+      <div className="flex flex-col justify-center items-center h-full max-sm:p-4 max-sm:ml-0 bg-black/30 relative">
         <h1 className="text-5xl font-bold text-center p-4 animate__animated animate__fadeInUp ">
           Additionals
         </h1>
@@ -39,7 +40,6 @@ const SeparatorVideo = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center items-center max-sm:hidden"></div>
     </div>
   );
 };

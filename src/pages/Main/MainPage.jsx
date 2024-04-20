@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState, createContext, use } from "react";
 import RedirectBtn from "@/components/Main/RedirectBtn";
-import LoginBtn from "@/components/Main/LoginBtn";
 import Presentation from "@/components/Main/Presentation";
 import AboutPage from "@/components/Main/AboutPage";
 import Separator from "@/components/Main/Separator";
@@ -82,8 +81,6 @@ const MainPage = () => {
 
       {/* Presentation Component */}
       <Presentation />
-      <RedirectBtn isSecondVisible={isSecondVisible} />
-      <LoginBtn isSecondVisible={isSecondVisible} />
       <AnimationContext.Provider value={contextValue}>
         <div className={toggleVisible}>
           {/* Separator */}
